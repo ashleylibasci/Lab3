@@ -1,18 +1,40 @@
-/*
- * Project Lab3
- * Description:
- * Author:
- * Date:
- */
+SYSTEM_MODE(MANUAL);
+SYSTEM_THREAD(ENABLED);
 
-// setup() runs once, when the device is first turned on.
 void setup() {
-  // Put initialization like pinMode and begin functions here.
+pinMode(D7, OUTPUT);
+pinMode(D6, OUTPUT);
+pinMode(D5, OUTPUT);
 
 }
 
-// loop() runs over and over again, as quickly as it can execute.
 void loop() {
-  // The core of your code will likely live here.
-
+analogWrite(D7, 0); //red
+analogWrite(D6, 255);
+analogWrite(D5, 255);
+delay(1000);
+analogWrite(D7, 255); //green
+analogWrite(D6, 0);
+analogWrite(D5, 255);
+delay(1000);
+analogWrite(D7, 255); //blue
+analogWrite(D6, 255);
+analogWrite(D5, 0);
+delay(1000);
+analogWrite(D7, 0); //orange
+analogWrite(D6, 90);
+analogWrite(D5, 255);
+delay(1000);
+analogWrite(D7, 0); //yellow
+analogWrite(D6, 0);
+analogWrite(D5, 255);
+delay(1000);
+analogWrite(D7, 95); //purple
+analogWrite(D6, 223);
+analogWrite(D5, 15);
+delay(1000);
+analogWrite(D7, 255); //cyan
+analogWrite(D6, 155);
+analogWrite(D5, 155);
+delay(1000);
 }
